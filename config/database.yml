@@ -1,0 +1,24 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  database: OH_development
+  username: root
+  password: password
+  host: localhost
+
+test: &test
+  adapter: mysql2
+  encoding: utf8
+  database: OH_test
+  username: root
+  password: password
+  host: localhost
+
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  database: OH_production
+  username: OH_production_god
+  password: password
+  host: localhost

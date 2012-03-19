@@ -13,3 +13,21 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore copies
+*~
+
+# Ignore gems
+*.gem
+
+# Ignore IDE files
+.idea/**/*
+.idea
+Rally.ids
+
+.DS_Store
+
+.rvmrc
+nbproject/
+push
+pull
