@@ -1,0 +1,54 @@
+<%= form_for(@item) do |f| %>
+    <% if @item.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+          <ul>
+            <% @item.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+    </div>
+
+    <div class="field">
+      <%= f.label 'Your First Name' %>
+      <%= f.text_field :user_first_name %>
+    </div>
+
+    <div class="field">
+      <%= f.label 'Your Last Name' %>
+      <%= f.text_field :user_last_name %>
+    </div>
+
+    <div class="field">
+      <%= f.label 'Your Email' %>
+      <%= f.text_field :user_email %>
+    </div>
+    <br/>
+    <div class="field">
+      <div><%= f.radio_button :licence_id, '1' %> Free use, no attribution</div>
+      <div><%= f.radio_button :licence_id, '2' %>  Attribution, otherwise free use</div>
+    </div>
+    <br/>
+    <div class="field">
+      <div><%= radio_button_tag('licence_type', 1) %> Licence whole item</div>
+      <div><%= radio_button_tag('licence_type', 2) %>  Licence a part of item</div>
+    </div>
+    <br/>
+
+    <div class="actions">
+      <%= link_to 'Cancel', items_path, :class => 'btn custom large' %>
+      <%= f.submit (@item.new_record? ? 'Create' : 'Update'), :class => 'btn custom large' %>
+    </div>
+<% end %>
