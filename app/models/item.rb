@@ -7,4 +7,12 @@ class Item < ActiveRecord::Base
   def licensor_name
     "#{user_first_name} #{user_last_name}"
   end
+
+  def self.search(search)
+    if search
+      where('name LIKE ?', "%#{search}%")
+    else
+      all
+    end
+  end
 end

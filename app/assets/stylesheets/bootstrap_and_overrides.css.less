@@ -1,5 +1,8 @@
 @import "twitter/bootstrap/bootstrap";
-body { padding-top: 60px; }
+
+body {
+    padding-top: 60px;
+}
 
 @import "twitter/bootstrap/responsive";
 
@@ -17,3 +20,31 @@ body { padding-top: 60px; }
 //
 // Example:
 // @linkColor: #ff0000;
+body {
+    padding-top: 0px;
+}
+
+.container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+    width: 800px;
+}
+
+.breadcrumb li a {
+    text-decoration: underline;
+}
+
+.breadcrumb li a:hover {
+    text-decoration: none;
+}
+footer p{
+    margin-top: 50px;
+    text-align: center;
+}
+input, textarea, select, .uneditable-input{
+    width: 350px;
+}
+textarea{
+    height: 100px;
+}
+.field label{
+    font-weight: bold;
+}

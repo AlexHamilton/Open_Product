@@ -1,4 +1,14 @@
 class ItemsController < ApplicationController
+  # GET /items
+  # GET /items.json
+  def index
+    @items = Item.search(params[:name])
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @items }
+    end
+  end
 
   # GET /items/1
   # GET /items/1.json

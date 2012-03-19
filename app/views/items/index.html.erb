@@ -1,0 +1,46 @@
+<% add_breadcrumb('...') %>
+
+<div class="welcome">
+  <h1>Open Hardware Repository</h1>
+
+  <div>Welcome to the open hardware repository. Use this site to license your own items and find items that have been
+    licensed.
+  </div>
+  <br/>
+
+  <div><%= link_to 'Create Licence', new_item_path, :class => 'btn custom large create-licence-home' %></div>
+</div>
+
+
+<div class="search-items-container">
+  <div>
+    <div><b>Search Licences</b></div>
+    <%= form_tag items_path, :method => :get do %>
+        <p>
+          <%= search_field_tag :name, params[:name], :class=> "auto_search_complete"%>
+          <%= submit_tag "Search", :name => nil, :class => 'btn_search', :id => "btn_search" %>
+        </p>
+    <% end %>
+  </div>
+  <br/>
+  <br/>
+
+  <table class="table table-striped">
+    <tr>
+      <th>Item Name</th>
+      <th>Date Created</th>
+      <th>Licensor Name</th>
+      <th>Licence Type</th>
+    </tr>
+
+    <% @items.each do |item| %>
+        <tr>
+          <td><%= link_to item.name, item %></td>
+          <td><%= item.created_at.strftime('%d %B %Y') %></td>
+          <td><%= item.licensor_name %></td>
+          <td><%= item.licence.name %></td>
+        </tr>
+    <% end %>
+  </table>
+
+</div>
