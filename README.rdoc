@@ -2,7 +2,7 @@
 
 A rails prototype for a repository of open designs.
 
-To install, clone this repository in git then from the root of the directory:
-bundle install
-bundle exec rake db:setup
-rails s
+To install, clone this repository in git then from the root directory:
+  bundle install
+  bundle exec rake db:setup
+  rails s
