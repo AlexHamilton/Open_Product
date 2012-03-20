@@ -12,11 +12,14 @@ end
 gem 'jquery-rails'
 gem 'twitter-bootstrap-rails'
 
+
 group :development, :test do
   # gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'annotate', '2.4.0'
 end
 
 group :production do
+  gem 'pg'
 end
 
 # To use ActiveModel has_secure_password
