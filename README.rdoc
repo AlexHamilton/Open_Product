@@ -1,4 +1,4 @@
-== Open Hardware
+== Open Products
 
 A rails prototype for a repository of open designs.
 

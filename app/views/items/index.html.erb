@@ -1,20 +1,20 @@
 <% add_breadcrumb('...') %>
 
 <div class="hero-unit">
-  <h1>Open Hardware Repository</h1>
+  <h1>Open Product Repository</h1>
   <br/>
-  <div>Welcome to the open hardware repository. Use this site to license your own items and find items that have been
+  <div>Welcome to the open product repository. Use this site to license your own items and find items that have been
     licensed.
   </div>
   <br/>
   <br/>
-  <div><%= link_to 'Create Licence', new_item_path, :class => 'btn btn-primary btn-large pull-right' %></div>
+  <div><%= link_to 'Add Product', new_item_path, :class => 'btn btn-primary btn-large pull-right' %></div>
 </div>
 
 
 <div class="search-items-container">
   <div>
-    <div><b>Search Licences</b></div>
+    <div><b>Search Products</b></div>
     <%= form_tag items_path, :method => :get do %>
         <p>
           <%= search_field_tag :name, params[:name], :class=> "auto_search_complete"%>
