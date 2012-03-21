@@ -17,13 +17,11 @@
     <div><b>Search Products</b></div>
     <%= form_tag items_path, :method => :get do %>
         <p>
-          <%= search_field_tag :name, params[:name], :class=> "auto_search_complete"%>
-          <%= submit_tag "Search", :name => nil, :class => 'btn_search', :id => "btn_search" %>
+          <%= search_field_tag :name, params[:name], :placeholder => 'search', :class=> "auto_search_complete"%>
+          <%= submit_tag "Search", :name => nil, :class => 'btn', :id => "btn_search" %>
         </p>
     <% end %>
   </div>
-  <br/>
-  <br/>
 
   <table class="table table-striped">
     <tr>
