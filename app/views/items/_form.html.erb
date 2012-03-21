@@ -35,20 +35,33 @@
       <%= f.label 'Your Email' %>
       <%= f.text_field :user_email %>
     </div>
-    <br/>
+
     <div class="field">
-      <div><%= f.radio_button :licence_id, '1' %> Free use, no attribution</div>
-      <div><%= f.radio_button :licence_id, '2' %>  Attribution, otherwise free use</div>
+      <div class="left-col">
+        <div class="field">
+          <div><%= f.radio_button :licence_id, '1' %> Free use, no attribution</div>
+          <div><%= f.radio_button :licence_id, '2' %>  Attribution, otherwise free use</div>
+        </div>
+
+        <div class="field">
+          <div>Licence Type:</div>
+          <div><%= f.radio_button :whole_object, true %> Licence whole item</div>
+          <div><%= f.radio_button :whole_object, false %> Licence a part of item</div>
+        </div>
+      </div>
+      <div class="right-col">
+        <div id="part_object">
+          <div style="display: <%=@item.whole_object? ? 'none' : 'block'%>;">
+            <%= f.label 'Which part' %>
+            <%= f.text_area :part_object, :class => 'txt-area-small' %>
+          </div>
+        </div>
+        <textarea class="txt-area-small" placeholder=""></textarea>
+      </div>
     </div>
-    <br/>
-    <div class="field">
-      <div><%= radio_button_tag('licence_type', 1) %> Licence whole item</div>
-      <div><%= radio_button_tag('licence_type', 2) %>  Licence a part of item</div>
-    </div>
-    <br/>
 
     <div class="actions">
       <%= link_to 'Cancel', items_path, :class => 'btn custom large' %>
-      <%= f.submit (@item.new_record? ? 'Create' : 'Update'), :class => 'btn custom large' %>
+      <%= f.submit (@item.new_record? ? 'Create' : 'Update'), :class => 'btn btn-primary' %>
     </div>
 <% end %>

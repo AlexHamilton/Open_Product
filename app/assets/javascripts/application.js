@@ -14,3 +14,13 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+
+
+$(document).ready(function () {
+    $('#item_whole_object_false').on('click', function () {
+        $('#part_object div').show();
+    });
+    $('#item_whole_object_true').on('click', function () {
+        $('#part_object div').hide();
+    });
+});

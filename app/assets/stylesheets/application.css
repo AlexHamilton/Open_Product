@@ -11,6 +11,20 @@
  *= require_self
  *= require_tree .
 */
-.edit-btn{
+
+.actions, .field{
+    clear: both;
+    margin-top: 10px;
+}
+.actions{
+    padding-top: 20px;
+}
+.field_with_errors{
+    display: inline;
+}
+.left-col{
+    float: left;
+}
+.right-col{
     float: right;
 }

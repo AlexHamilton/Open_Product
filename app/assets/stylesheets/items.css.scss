@@ -5,7 +5,6 @@
 
 .create-licence-home{
   float: right;
-
 }
 .search-items-container{
   margin: 10px 50px;
@@ -17,4 +16,17 @@
   margin: 10px 50px;
   border-radius: 3px 3px 3px 3px;
   box-shadow: 0 1px 0 #FFFFFF inset;
+}
+#part_object{
+  height: 70px;
+  margin-bottom: 20px;
+}
+.auto_search_complete{
+  width: 180px;
+}
+.search-items-container .btn{
+  vertical-align: top;
+}
+.txt-area-small{
+  height: 50px;
 }

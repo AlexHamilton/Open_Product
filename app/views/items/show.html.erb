@@ -1,37 +1,36 @@
 <% add_breadcrumb('Item details') %>
 
 <br/>
-<%= link_to 'Edit', edit_item_path(@item), :class => 'btn custom large edit-btn' %>
+<%= link_to 'Edit', edit_item_path(@item), :class => 'btn pull-right' %>
 <h1><%= @item.name %></h1>
-<br/>
 
 <div class="field">
   <%= label_tag :description %>
   <%= @item.description %>
 </div>
-<br/>
+<br />
 <div class="field">
   <%= label_tag 'User first name' %>
   <%= @item.user_first_name %>
 </div>
-<br/>
+<br />
 <div class="field">
   <%= label_tag 'User last name' %>
   <%= @item.user_last_name %>
 </div>
-<br/>
+<br />
 <div class="field">
   <%= label_tag 'User email' %>
   <%= @item.user_email %>
 </div>
-<br/>
+<br />
 <div class="field">
   <%= label_tag 'Licence Type' %>
-  <%= @item.licence.name %>
+  <%= @item.licence_type_details %>
 </div>
 <br/>
 <div>
-  <h2>Licence </h2>
+  <h2><%= @item.licence.name %></h2>
   <br/>
-  <%= @item.licence.licence %>
+  <%= @item.licence.licence.html_safe %>
 </div>
