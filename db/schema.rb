@@ -11,19 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120319145629) do
+ActiveRecord::Schema.define(:version => 20120321212240) do
 
   create_table "items", :force => true do |t|
     t.string   "name"
     t.text     "description"
-    t.integer  "licence_id"
-    t.boolean  "whole_object"
+    t.integer  "licence_id",      :default => 1,    :null => false
+    t.boolean  "whole_object",    :default => true, :null => false
     t.string   "part_object"
     t.string   "user_first_name"
     t.string   "user_last_name"
     t.string   "user_email"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
   end
 
   create_table "licences", :force => true do |t|
